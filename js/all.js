@@ -14,6 +14,8 @@ setInterval(function () {
     let angel__second = currentTime__second * 6;
     let angel__minute = currentTime__minute * 6;
     // 每一小時轉 30度
+    // 每一分鐘時針轉幾度 ?
+    // 每一秒時針轉幾度 ?
     let angel__hour = currentTime__hour * 30;
 
     let clockSecond = document.querySelector('.clock__second');
