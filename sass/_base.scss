@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box; 
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;      
+}
+
+body{
+  width: $body__width;
+  margin: 0 auto;
+  font-size: $body__font-size;
+  background-color: $body__background-color;
+  color: $body__color;
+  font-family:  $body__font-family;
+}
+
+img{
+  max-width: 100%;
+  
+}
+
+a{
+  text-decoration: none;
+}
+

@@ -1,0 +1,53 @@
+// 通用類
+.container {
+  width: 1280px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@each $color, $value in ($color) {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+  .text-#{$color} {
+    color: $value;
+  }
+}
+.text-center{
+  text-align: center;
+}
+
+.clock {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  background-image: url("../img/clock-bg.svg");
+  background-position: center center;
+  // hour -90; min 0; sec 180 -> 歸零
+  &__hour{
+    position: absolute;
+    content: '';
+    top: 48%;
+    left: 50%;
+    transform-origin: left center ;
+    transform: rotate(-90deg);
+  }
+  &__minute{
+    position: absolute;
+    content: '';
+    top: 23%;
+    left: 48.8%;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+  }
+  &__second{
+    position: absolute;
+    content: '';
+    top: 49%;
+    left: 48%;
+    transform-origin:top center;
+    transform: rotate(180deg);
+  }
+}
