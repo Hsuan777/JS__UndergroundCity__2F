@@ -26,6 +26,7 @@
   background-image: url("../img/clock-bg.svg");
   background-position: center center;
   // hour -90; min 0; sec 180 -> 歸零
+  // TODO:transform-origin，圖片中心點更改
   &__hour{
     position: absolute;
     content: '';
