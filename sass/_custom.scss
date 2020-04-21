@@ -24,31 +24,59 @@
   height: 350px;
   position: relative;
   background-image: url("../img/clock-bg.svg");
-  background-position: center center;
-  // hour -90; min 0; sec 180 -> 歸零
-  // TODO:transform-origin，圖片中心點更改
+  background-position: center ;
+  // 十字定位
+  // &::before{
+  //   position: absolute;
+  //   content: '';
+  //   width: 100%;
+  //   height: 1px;
+  //   background: white;
+  //   top: 171.5px;
+  //   left: 0;
+  // }
+  // &::after{
+  //   position: absolute;
+  //   content: '';
+  //   width: 1px;
+  //   height: 100%;
+  //   background: white;
+  //   top: 0px;
+  //   left: 174.5px;
+  // }
+
+
+  // hour -90; min 0; sec 180 -> 往12點鐘方向歸零
   &__hour{
     position: absolute;
     content: '';
-    top: 48%;
-    left: 50%;
-    transform-origin: left center ;
+    top: 170px;
+    left: 172px;
+    transform-origin: 3px center ;
     transform: rotate(-90deg);
+    // 時針定位
+    // border-left: 1px solid pink;
   }
   &__minute{
     position: absolute;
     content: '';
-    top: 23%;
-    left: 48.8%;
-    transform-origin: bottom center;
+    top: 80px;
+    left:171px;
+    transform-origin:  center 92px;
     transform: rotate(0deg);
+    z-index: 9;
+    // 分針定位
+    // border-bottom: 1px solid blue;
   }
   &__second{
     position: absolute;
     content: '';
-    top: 49%;
-    left: 48%;
-    transform-origin:top center;
+    bottom: 52px;
+    left: 168.4px;
+    transform-origin:center 0;
     transform: rotate(180deg);
+    // 秒針定位
+    // border-top: 1px solid red;
+
   }
 }
