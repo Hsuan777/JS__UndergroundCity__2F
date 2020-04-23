@@ -59,7 +59,7 @@ table {
 }
 
 body {
-  width: 1920px;
+  width: 100%;
   margin: 0 auto;
   font-size: 24px;
   background-color: #293B29;
@@ -73,7 +73,7 @@ img {
 }
 
 .container {
-  width: 1280px;
+  max-width: 1280px;
   height: 100vh;
   margin: 0 auto;
   display: -webkit-box;
